@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-IDE</title>
+    <script src="https://cdn.jsdelivr.net/gh/CyroCoders/CyroWebF@0.4-indev/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/CyroCoders/CyroWebF@0.4-indev/js/tab.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CyroCoders/CyroWebF@0.4-indev/css/main.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="fullScreen">
+        <nav>
+            <button class="glow-green"><span class="text">Hello</span><span class="icon-r icon-24 icon-light"><img src="https://cdn.jsdelivr.net/gh/CyroCoders/CyroWebF@0.3-indev/icon/chevron-forward-outline.svg" alt=" "></span></button>
+        </nav>
+        <div id="viewbox" class="box" boxAlign="horizontal">
+            <div class="fullHeight" id="LPanel">
+                <div id="FileManager">
+                    <div id="FMHead">
+                        <span class="text">File Manager</span>
+                    </div>
+                    <hr>
+                    <div id="FMBody">
+
+                    </div>
+                </div>
+            </div>
+            <div class="fullHeight" id="MPanel">
+                
+                <div class="editor-pane">
+                    <div class="tab-area" id="fileeditor">
+                    <div class="tab" draggable="true" onclick="activate(this);" id="aaaa" tab-bar="#fileeditor">
+                        aaaa
+                        <span class="icon-24 icon-light close" onclick="closeTab(this);">
+                            <img src="https://cdn.jsdelivr.net/gh/CyroCoders/CyroWebF@0.3-indev/icon/close-outline.svg" alt=" ">
+                        </span>
+                    </div>
+                    <div class="tab" draggable="true" onclick="activate(this);" id="bbbb" tab-bar="#fileeditor">
+                        bbbb
+                        <span class="icon-24 icon-light close" onclick="closeTab(this);">
+                            <img src="https://cdn.jsdelivr.net/gh/CyroCoders/CyroWebF@0.3-indev/icon/close-outline.svg" alt=" ">
+                        </span>
+                    </div>
+                    <div class="tab" draggable="true" onclick="activate(this);" id="cccc" tab-bar="#fileeditor">
+                        cccc
+                        <span class="icon-24 icon-light close" onclick="closeTab(this);">
+                            <img src="https://cdn.jsdelivr.net/gh/CyroCoders/CyroWebF@0.3-indev/icon/close-outline.svg" alt=" ">
+                        </span>
+                    </div>
+                </div>
+                <div class="editor-window">
+
+                </div>
+            </div>
+            </div>
+            <div class="fullHeight" id="RPanel">
+                <div class="editor-pane">
+                    <div class="tab-area" id="previewarea">
+                        <div class="tab" draggable="true" onclick="activate(this);" id="aaaa" tab-bar="#previewarea">
+                            aaaa
+                            <span class="icon-24 icon-light close" onclick="closeTab(this);">
+                                <img src="https://cdn.jsdelivr.net/gh/CyroCoders/CyroWebF@0.3-indev/icon/close-outline.svg" alt=" ">
+                            </span>
+                        </div>
+                        <div class="tab" draggable="true" onclick="activate(this);" id="bbbb" tab-bar="#previewarea">
+                            bbbb
+                            <span class="icon-24 icon-light close" onclick="closeTab(this);">
+                                <img src="https://cdn.jsdelivr.net/gh/CyroCoders/CyroWebF@0.3-indev/icon/close-outline.svg" alt=" ">
+                            </span>
+                        </div>
+                        <div class="tab" draggable="true" onclick="activate(this);" id="cccc" tab-bar="#previewarea">
+                            cccc
+                            <span class="icon-24 icon-light close" onclick="closeTab(this);">
+                                <img src="https://cdn.jsdelivr.net/gh/CyroCoders/CyroWebF@0.3-indev/icon/close-outline.svg" alt=" ">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="editor-window half-split">
+                    </div>
+                </div>
+                    
+                <div class="editor-pane">
+                    <div class="tab-area" id="terminalarea">
+                        <div class="tab" draggable="true" onclick="activate(this);" id="aaaa" tab-bar="#terminalarea">
+                            aaaa
+                            <span class="icon-24 icon-light close" onclick="closeTab(this);">
+                                <img src="https://cdn.jsdelivr.net/gh/CyroCoders/CyroWebF@0.3-indev/icon/close-outline.svg" alt=" ">
+                            </span>
+                        </div>
+                        <div class="tab" draggable="true" onclick="activate(this);" id="bbbb" tab-bar="#terminalarea">
+                            bbbb
+                            <span class="icon-24 icon-light close" onclick="closeTab(this);">
+                                <img src="https://cdn.jsdelivr.net/gh/CyroCoders/CyroWebF@0.3-indev/icon/close-outline.svg" alt=" ">
+                            </span>
+                        </div>
+                        <div class="tab" draggable="true" onclick="activate(this);" id="cccc" tab-bar="#terminalarea">
+                            cccc
+                            <span class="icon-24 icon-light close" onclick="closeTab(this);">
+                                <img src="https://cdn.jsdelivr.net/gh/CyroCoders/CyroWebF@0.3-indev/icon/close-outline.svg" alt=" ">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="editor-window half-split">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js" defer></script>
+</body>
+</html>

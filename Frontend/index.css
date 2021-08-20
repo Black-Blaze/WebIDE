@@ -1,0 +1,155 @@
+:root {
+    --pane-color: #000B29;
+    --background-color: #00091F;
+}
+
+* {
+    color: #fff;
+}
+
+html,body {
+    background-color: var(--background-color);
+    font-family: 'IBM Plex Sans',Ubuntu;
+}
+
+nav {
+    width: 100vw;
+    height: 80px;
+    position: static;
+    background-color: var(--pane-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#LPanel {
+    width: 20%;
+    min-width: 280px;
+    background-color: var(--pane-color);
+    margin: 10px;
+    margin-inline-end: 5px;
+    border-radius: 10px;
+    max-height: calc(100vh - 100px);
+}
+
+#LPanel #FileManager #FMHead {
+    padding: 10px;
+}
+
+#LPanel #FileManager #FMHead span.text {
+    font-size: 18px;
+    line-height: 42px;
+}
+
+#LPanel #FileManager hr {
+    margin-top: 0;
+    margin-inline: 10px;
+}
+
+#MPanel {
+    width: 40vw;
+    min-width: 500px;
+    background-color: var(--pane-color);
+    margin: 10px;
+    margin-inline: 5px;
+    border-radius: 10px;
+    max-height: calc(100vh - 100px);
+}
+
+.tab-area {
+    width: 40vw;
+    min-width: 500px;
+    background-color: var(--background-color);
+    margin: 0;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+}
+
+.tab-area .tab {
+    height: 48px;
+    min-width: 128px;
+    width: min-content;
+    max-width: 172px;
+    background-color: var(--pane-color);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    opacity: .8;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: .3s;
+}
+
+.tab-area .tab .close {
+    display: none;
+    transition: .3s;
+}
+
+.tab-area .tab:hover .close {
+    display: initial;
+    transition: .3s;
+}
+
+.tab-area .tab.active {
+    opacity: 1;
+}
+
+.tab-area .tab.dragging {
+    opacity: .5;
+    transition: 0.3s;
+}
+
+.editor-window {
+    width: 40vw;
+    min-width: 500px;
+    height: calc(100vh - 100px - 48px);
+}
+
+.editor-window.half-split {
+    height: calc(calc(100vh - 100px - 48px ) / 2 - 20px);
+}
+
+#RPanel {
+    width: 40%;
+    min-width: 500px;
+    background-color: var(--pane-color);
+    margin: 10px;
+    margin-inline-start: 5px;
+    border-radius: 10px;
+    max-height: calc(100vh - 100px);
+}
+
+button.glow-green {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 16px;
+    width: 98px;
+    height: 48px;
+    border: none;
+    background: #6FCF97;
+    box-shadow: 0px 0px 16px #219653;
+    border-radius: 4px;
+    padding: 0px 16px;
+}
+
+.icon-24, .icon-24 img {
+    width: 24px;
+    height: 24px;
+    stroke: #fff;
+    border-color: #fff;
+}
+
+.icon-light {
+    filter: invert();
+}
+
+span.text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+}
