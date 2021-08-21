@@ -104,6 +104,7 @@ nav {
     width: 40vw;
     min-width: 500px;
     height: calc(100vh - 100px - 48px);
+    margin-top: 10px;
 }
 
 .editor-window.half-split {
