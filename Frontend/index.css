@@ -108,7 +108,7 @@ nav {
 }
 
 .editor-window.half-split {
-    height: calc(calc(100vh - 100px - 48px ) / 2 - 20px);
+    height: calc(calc(100vh - 100px - 48px ) / 2 - 40px)
 }
 
 #RPanel {
