@@ -1,0 +1,14 @@
+.split-horizontal-container {
+    width: 0;
+    height: calc(100vh - 100px);
+    margin-top: 10px;
+    z-index: 1000;
+}
+
+.split-horizontal {
+    min-width: 10px;
+    height: calc(100vh - 100px);
+    position: absolute;
+    cursor: col-resize;
+    transform: translateX(-50%);
+}

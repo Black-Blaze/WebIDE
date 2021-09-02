@@ -1,0 +1,15 @@
+.editor-pane {
+    overflow-x: hidden;
+}
+
+.ace_editor {
+    height: calc(100vh - 100px);
+    border: 2px var(--pane-color) solid;
+    border-left: none;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+}
+
+.ace_print-margin {
+    display: none !important;
+}

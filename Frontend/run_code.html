@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="run_code.css">
+</head>
+<body onload="brython()">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.9.5/brython.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.9.5/brython_stdlib.min.js"></script>
+    
+    <script type="text/python">
+        from browser import document
+        from browser import html
+        import sys
+        class printer():
+            def __init__(self):
+                self.console = document["console"]
+                self.printCount = 0
+    
+            def write(self, text):
+                self.printCount += 1
+                if self.printCount % 2 == 1:
+                    self.console <= html.P(text, id="code-line")
+
+        class printerE():
+            def __init__(self):
+                self.console = document["console"]
+                self.printCount = 0
+    
+            def write(self, text):
+                self.printCount += 1
+                if self.printCount % 2 == 1:
+                    self.console <= html.P(text, id="code-line-error")
+    
+        #document["console"] <= "Made By Sushant Shah"
+        sys.stdout = printer()
+        sys.stderr = printerE()
+    </script>
+    <script type="text/python" id="usercode">
+    </script>
+    <script src="/API/node_modules/xterm/lib/xterm.js"></script>
+
+    <script>
+        const inputStr = window.location.search;
+        const input = new URLSearchParams(inputStr);
+        if(input.has('code')) {
+            const code = input.get('code');
+    
+            document.getElementById("usercode").innerHTML = code;
+        }
+
+        window.addEventListener("message",(ev) => {
+            if (ev.origin === window.location.origin) {
+                console.log(ev.data)
+                document.querySelector("#console").style.color = ev.data.color
+            }
+        });
+    </script>
+    <div id="console">
+    </div>    
+</body>
+</html>
+<body>

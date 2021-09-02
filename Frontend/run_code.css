@@ -1,0 +1,26 @@
+#console {
+    background-color: transparent;
+}
+
+html {
+    height: 100%;
+}
+
+p#code-line {
+    margin: 0;
+    margin-inline-start: 1em;
+}
+
+p#code-line-error {
+    margin: 0;
+    margin-inline-start: 1em;
+    color: #e42929;
+}
+
+p#code-line::before {
+    content: ">>>"
+}
+
+p#code-line-error::before {
+    content: "->"
+}
